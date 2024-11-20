@@ -50,11 +50,17 @@ Kinh nghiệm từ các thành phố lớn: Nhiều thành phố hiện đại �
 	+ Hiển thị nhiệt độ, độ ẩm, khí ga lên dashboard
 
 # Sơ đồ khối dự kiến
-1. Phần cửa ra/vào:
-![Hình 0](./images/1.png)
+1. Sơ đồ khối
+![Hình 1](./images/3.png)
 
-2. Phần bãi đỗ xe:
-![Hình 1](./images/2.png)
+2. Lưu đồ thuật toán:
+- Phần cửa ra/vào
+
+![Hình 2](./images/1.png)
+
+-Phần bãi đỗ xe
+
+![Hình 3](./images/2.png)
 
 # Mục tiêu của đề tài
 
