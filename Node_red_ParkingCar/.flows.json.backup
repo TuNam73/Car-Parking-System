@@ -1,0 +1,797 @@
+[
+    {
+        "id": "d8089fb4bba6a441",
+        "type": "tab",
+        "label": "Vehicles Count",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "561837aaa99de116",
+        "type": "tab",
+        "label": "Status & Control Door",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "02c77d8078795f69",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "fe2295c97ad634b1",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "c72339f4.ala.eu-central-1.emqxsl.com",
+        "port": "8883",
+        "tls": "255f7c355e83a469",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "255f7c355e83a469",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "emqxsl-ca.crt",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "a7dd76d3351c3b28",
+        "type": "ui_tab",
+        "name": "Vehicles Count",
+        "icon": "fa-list-ol",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "63ef07ba012f0932",
+        "type": "ui_group",
+        "name": "Chart of Vehicles following time",
+        "tab": "a7dd76d3351c3b28",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e9093d350f74b52d",
+        "type": "ui_group",
+        "name": "Number of Vehicles",
+        "tab": "a7dd76d3351c3b28",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5dd1bca948442833",
+        "type": "ui_tab",
+        "name": "Control Door",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "18d9a4554244bce3",
+        "type": "ui_group",
+        "name": "Control Entry",
+        "tab": "5dd1bca948442833",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1201125a7dd9913a",
+        "type": "ui_group",
+        "name": "Control Exit",
+        "tab": "5dd1bca948442833",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "623e7d816755465c",
+        "type": "ui_group",
+        "name": "Status Entry",
+        "tab": "5dd1bca948442833",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "113a2cbb4fe2e867",
+        "type": "ui_group",
+        "name": "Status Exit",
+        "tab": "5dd1bca948442833",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5116b7264ce7df22",
+        "type": "ui_tab",
+        "name": "Nhà Thông Minh IoT",
+        "icon": "fa-fire",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "27b363a7f06d6355",
+        "type": "mqtt in",
+        "z": "d8089fb4bba6a441",
+        "name": "",
+        "topic": "home/vehicles_count",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "fe2295c97ad634b1",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 200,
+        "wires": [
+            [
+                "d0cb2e37bb3d33b0",
+                "364ff5b5ed33d34b",
+                "1a18ae0f471550dc"
+            ]
+        ]
+    },
+    {
+        "id": "364ff5b5ed33d34b",
+        "type": "ui_gauge",
+        "z": "d8089fb4bba6a441",
+        "name": "",
+        "group": "63ef07ba012f0932",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 510,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "1a18ae0f471550dc",
+        "type": "ui_chart",
+        "z": "d8089fb4bba6a441",
+        "name": "",
+        "group": "63ef07ba012f0932",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 510,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d0cb2e37bb3d33b0",
+        "type": "debug",
+        "z": "d8089fb4bba6a441",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "9e70df47105250c2",
+        "type": "mqtt in",
+        "z": "d8089fb4bba6a441",
+        "name": "",
+        "topic": "home/vehicles_count",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "fe2295c97ad634b1",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 360,
+        "wires": [
+            [
+                "4f1ea099f33785a3",
+                "a6bafdb6c32cef79"
+            ]
+        ]
+    },
+    {
+        "id": "a6bafdb6c32cef79",
+        "type": "ui_text",
+        "z": "d8089fb4bba6a441",
+        "group": "e9093d350f74b52d",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Number of Vehicles",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 550,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "4f1ea099f33785a3",
+        "type": "debug",
+        "z": "d8089fb4bba6a441",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "e3b254acdd3d78aa",
+        "type": "mqtt out",
+        "z": "561837aaa99de116",
+        "name": "",
+        "topic": "home/exit",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "fe2295c97ad634b1",
+        "x": 880,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "a05f7fec9db68c37",
+        "type": "mqtt out",
+        "z": "561837aaa99de116",
+        "name": "",
+        "topic": "home/entry",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "fe2295c97ad634b1",
+        "x": 410,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "d8151bb0994fe6b2",
+        "type": "ui_button",
+        "z": "561837aaa99de116",
+        "name": "",
+        "group": "18d9a4554244bce3",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "label": "Open Entry",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "green",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "home/entry",
+        "topicType": "msg",
+        "x": 150,
+        "y": 60,
+        "wires": [
+            [
+                "a05f7fec9db68c37"
+            ]
+        ]
+    },
+    {
+        "id": "80976bb2d4e93c1e",
+        "type": "ui_button",
+        "z": "561837aaa99de116",
+        "name": "",
+        "group": "1201125a7dd9913a",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Close Exit",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "topic": "home/exit",
+        "topicType": "msg",
+        "x": 620,
+        "y": 140,
+        "wires": [
+            [
+                "e3b254acdd3d78aa"
+            ]
+        ]
+    },
+    {
+        "id": "b484128b354c3f6e",
+        "type": "mqtt in",
+        "z": "561837aaa99de116",
+        "name": "",
+        "topic": "home/entry",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "fe2295c97ad634b1",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 80,
+        "y": 240,
+        "wires": [
+            [
+                "5a99618e47a072bc",
+                "21478c8d22b33894"
+            ]
+        ]
+    },
+    {
+        "id": "bc309b55df4a4574",
+        "type": "mqtt in",
+        "z": "561837aaa99de116",
+        "name": "",
+        "topic": "home/exit",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "fe2295c97ad634b1",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 600,
+        "y": 240,
+        "wires": [
+            [
+                "9e34d04394c50893",
+                "2ba71449975f0ec9"
+            ]
+        ]
+    },
+    {
+        "id": "760736500c64119a",
+        "type": "ui_button",
+        "z": "561837aaa99de116",
+        "name": "",
+        "group": "18d9a4554244bce3",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Close Entry",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "topic": "home/entry",
+        "topicType": "msg",
+        "x": 150,
+        "y": 140,
+        "wires": [
+            [
+                "a05f7fec9db68c37"
+            ]
+        ]
+    },
+    {
+        "id": "cfa9c7ffaabbc72e",
+        "type": "ui_button",
+        "z": "561837aaa99de116",
+        "name": "",
+        "group": "1201125a7dd9913a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Open Exit",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "green",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "home/exit",
+        "topicType": "msg",
+        "x": 620,
+        "y": 60,
+        "wires": [
+            [
+                "e3b254acdd3d78aa"
+            ]
+        ]
+    },
+    {
+        "id": "759659bf8e9260f5",
+        "type": "ui_text",
+        "z": "561837aaa99de116",
+        "group": "623e7d816755465c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 450,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "6c61dfc556729f11",
+        "type": "ui_text",
+        "z": "561837aaa99de116",
+        "group": "113a2cbb4fe2e867",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 930,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "5a99618e47a072bc",
+        "type": "function",
+        "z": "561837aaa99de116",
+        "name": "function 1",
+        "func": "if (msg.payload == \"1\") {\n    msg.payload = \"OPENING\";\n} else {\n    msg.payload = \"CLOSING\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 240,
+        "wires": [
+            [
+                "759659bf8e9260f5"
+            ]
+        ]
+    },
+    {
+        "id": "dde560c26b6e4414",
+        "type": "ui_colour_picker",
+        "z": "561837aaa99de116",
+        "name": "",
+        "label": "",
+        "group": "623e7d816755465c",
+        "format": "rgb",
+        "outformat": "string",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "passthru": true,
+        "topic": "home/entry",
+        "topicType": "msg",
+        "className": "",
+        "x": 430,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "21478c8d22b33894",
+        "type": "function",
+        "z": "561837aaa99de116",
+        "name": "function 2",
+        "func": "if (msg.payload == \"1\") {\n    msg.payload = \"#00FF00\"; \n} else {\n    msg.payload = \"#FF0000\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 320,
+        "wires": [
+            [
+                "dde560c26b6e4414"
+            ]
+        ]
+    },
+    {
+        "id": "9e34d04394c50893",
+        "type": "function",
+        "z": "561837aaa99de116",
+        "name": "function 3",
+        "func": "if (msg.payload == \"1\") {\n    msg.payload = \"OPENING\";\n} else {\n    msg.payload = \"CLOSING\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 240,
+        "wires": [
+            [
+                "6c61dfc556729f11"
+            ]
+        ]
+    },
+    {
+        "id": "2ba71449975f0ec9",
+        "type": "function",
+        "z": "561837aaa99de116",
+        "name": "function 4",
+        "func": "if (msg.payload == \"1\") {\n    msg.payload = \"#00FF00\"; \n} else {\n    msg.payload = \"#FF0000\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 320,
+        "wires": [
+            [
+                "40bfd589411198ba"
+            ]
+        ]
+    },
+    {
+        "id": "40bfd589411198ba",
+        "type": "ui_colour_picker",
+        "z": "561837aaa99de116",
+        "name": "",
+        "label": "",
+        "group": "113a2cbb4fe2e867",
+        "format": "rgb",
+        "outformat": "string",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 950,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    }
+]

@@ -71,6 +71,8 @@ Xây dựng một hệ thống bãi đỗ xe thông minh đáp ứng nhu cầu t
 - Tích hợp dashboard qua Node-RED để hiển thị và điều khiển.
 - Chi phí thấp, dễ lắp đặt và triển khai.
 
-## Note
-Do project trên em chuẩn bị cho bài cuối kì, chắc chắn là em không thể hoàn thiện toàn bộ project trên trong bài giữa kì được. Nên trong bài giữa kì, em xin phép chỉ hoàn thiện 1 phần, phần còn lại và bổ sung em sẽ làm cho bài cuối kì ạ.
-Em xin chân thành cảm ơn!
+## Bài giữa kì
+![Hình 4](./images/6.jpg)
+![Hình 5](./images/7.png)
+![Hình 6](./images/4.png)
+![Hình 7](./images/5.png)
