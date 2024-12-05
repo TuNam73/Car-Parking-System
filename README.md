@@ -71,8 +71,16 @@ Xây dựng một hệ thống bãi đỗ xe thông minh đáp ứng nhu cầu t
 - Tích hợp dashboard qua Node-RED để hiển thị và điều khiển.
 - Chi phí thấp, dễ lắp đặt và triển khai.
 
-## Bài giữa kì
-![Hình 4](./images/6.jpg)
-![Hình 5](./images/7.png)
-![Hình 6](./images/4.png)
-![Hình 7](./images/5.png)
+## Project giữa kì
+1. Mô hình:
+![Hình 4](./images/12.jpg)
+
+2. Node-red edit
+![Hình 5](./images/10.png)
+![Hình 6](./images/11.png)
+
+3. Node-red dashboard 2.0
+![Hình 7](./images/8.png)
+![Hình 8](./images/9.png)
+
+4. Video demo: [Video youtube](https://www.youtube.com/shorts/EwfClbjN2_Q)

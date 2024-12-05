@@ -69,7 +69,7 @@ void handleDoor(Servo& servo, const int trigPin, const int echoPin, int directCo
   const char* handle_door_topic = (&servo == &servo1) ? handle_entry_topic : handle_exit_topic;
 
   // Phat hien co xe 
-  if (distanceCm > 0 && distanceCm <= 15) {
+  if (distanceCm > 0 && distanceCm <= 9) {
     if (previousAngle != 90) {
       servo.write(90);
       previousAngle = 90;

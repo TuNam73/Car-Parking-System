@@ -4,7 +4,7 @@
 #include <Arduino.h>
 #include <LiquidCrystal_I2C.h>
 
-LiquidCrystal_I2C lcd(0x27, 20, 4); 
+LiquidCrystal_I2C lcd(0x3E, 20, 4); 
 
 static unsigned long previous_time_lcd = 0;
 static unsigned int lcd_state = 0;

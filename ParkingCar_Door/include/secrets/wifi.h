@@ -1,5 +1,5 @@
 namespace WiFiSecrets
 {
-    const char *ssid = "Wokwi-GUEST";   // Enter your Wi-Fi name
-    const char *pass = ""; // Enter Wi-Fi password
+    const char *ssid = "Xoi Sen Que";   // Enter your Wi-Fi name
+    const char *pass = "230QuanNhan"; // Enter Wi-Fi password
 }
